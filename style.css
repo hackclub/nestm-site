@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+    width: 100%;
+    margin-left: 0px;
+}
+
+body {
+    background-color: #68428A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    max-width: 600px; 
+    margin: auto; 
+    line-height: 2
+}
+
+#sponsors {
+   font-family: 'Ubuntu', sans-serif;
+   max-width: 600px;
+   margin: auto;
+   line-height: 1.5
+}
+
+#support {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+#nestmlogo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#hclogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#logos{
+  grid-template-columns: repeat(6, 50px)
+}
+
+@media screen and (max-width: 600px) {
+    #logos {
+        grid-template-columns: repeat(3, 60px);
+    }
+
+    #hclogo {
+        display: none;
+    }
+}
+
+/* Rainbow code begins here */
+.rainbow {
+    animation: rainbow 10s infinite alternate;
+}
+
+@keyframes rainbow {
+  0% {background-color: hsl(0, 100%, 50%);}
+  14% {background-color: hsl(30,100%,50%);}
+  28% {background-color: hsl(60, 100%, 27%);}
+  42% {background-color: rgb(1, 155, 1);}
+  56% {background-color:  hsl(195, 99%, 32%);}
+  70% {background-color: hsl(280,100%,50%);}
+  84% {background-color: rgb(177, 2, 119);}
+  100% {background-color: rgb(204, 58, 0);}
+}
+/* Rainbow code ends here */
+
+/* Gradient code starts here */
+.rainbow-gradient {
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #d6a811,
+    #ced114, 
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  background-size: 1800% 1800%;
+  animation: rainbow-gradient 18s ease infinite;
+}
+
+@keyframes rainbow-gradient {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+/* Gradient code ends here */
+
+/* Also make sure you add it to the body's class like class="rainbow-gradient" or class="rainbow" -- If the body already has classes, add other classes with a space. class="someclass anotherclass rainbow-gradient" */

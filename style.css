@@ -122,3 +122,8 @@ body {
 /* Gradient code ends here */
 
 /* Also make sure you add it to the body's class like class="rainbow-gradient" or class="rainbow" -- If the body already has classes, add other classes with a space. class="someclass anotherclass rainbow-gradient" */
+
+a {color:#fff;}         /* Unvisited link  */
+a:visited {color:#fff;} /* Visited link    */
+a:hover {color:#fff;}   /* Mouse over link */
+a:active {color:#fff;}  /* Selected link   */

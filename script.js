@@ -1,3 +1,7 @@
+const body = document.getElementsByTagName("body")[0]
+const switchBtn = document.getElementById("switch")
+const modeSwap = document.getElementById("color-scheme-swap")
+
 function getDateOfWeekday(refday){
     var days = {
         monday: 1,
@@ -27,8 +31,7 @@ friday.setHours(14,0,0);
 document.getElementById('meeting-time').innerHTML = "<h4 style=\"margin-block-end: 0em\">The next club meeting is at: </h4><strong><br><h2 style=\"margin-block-end: 0em; margin-block-start: 0em; font-weight: 800; font-family: 'Ubuntu', sans-serif;\">"+friday.toLocaleString()+"</h2></strong><br/>";
 
 let isGradient = true
-const body = document.getElementsByTagName("body")[0]
-document.getElementById("switch").addEventListener('click', _ => {
+switchBtn.addEventListener('click', _ => {
     if (isGradient) {
         isGradient = false
         body.classList.remove('rainbow-gradient')
@@ -37,6 +40,24 @@ document.getElementById("switch").addEventListener('click', _ => {
         isGradient = true
         body.classList.remove('rainbow')
         body.classList.add('rainbow-gradient')
+    }
+    console.log(change.classList)
+})
+
+let isDark = false
+modeSwap.addEventListener('click', _ => {
+    if (isDark) {
+        isDark = false
+        body.classList.add('rainbow-gradient')
+        switchBtn.style.display = ""
+    } else {
+        isGradient = true // NOT A BUG, DO NOT REMOVE
+        body.classList.remove('rainbow-gradient')
+        body.classList.remove('rainbow')
+        switchBtn.style.display = "none"
+
+        isDark = true
+        body.classList.add('darkmode')
     }
     console.log(change.classList)
 })

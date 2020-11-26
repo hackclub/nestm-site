@@ -63,7 +63,9 @@ body {
 }
 
 #logos{
-  grid-template-columns: repeat(6, 50px)
+  grid-template-columns: repeat(5, 50px);
+  align-items: center;
+   justify-items: center;
 }
 
 @media screen and (max-width: 600px) {

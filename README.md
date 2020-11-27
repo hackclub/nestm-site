@@ -8,3 +8,5 @@ You've stumbled accross the Hack Club @ nest+m, a Middle School chapter of the i
 Thanks to our supporters, Hack Club, Stickermule, Github, Notion, Repl, and Figma.
 
 Special thanks to Sam Poder and Khushraj Rathod for helping me make the site!
+
+Additionally, thanks to Kerin Pithawala for spotting an issue with the Vercel Dynamic Logo, which may not load on some devices, and also for fixing it.

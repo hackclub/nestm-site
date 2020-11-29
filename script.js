@@ -1,5 +1,6 @@
 const body = document.getElementsByTagName("body")[0]
 const switchBtn = document.getElementById("switch")
+const signupBtn = document.getElementById("signup")
 const modeSwap = document.getElementById("color-scheme-swap")
 const notion = document.getElementById("notion")
 
@@ -52,15 +53,20 @@ modeSwap.addEventListener('click', _ => {
         body.classList.add('rainbow-gradient')
         switchBtn.style.display = ""
         notion.src = "https://logos-download.com/wp-content/uploads/2019/06/Notion_App_Logo.png"
+        
     } else {
         isGradient = true // NOT A BUG, DO NOT REMOVE
         body.classList.remove('rainbow-gradient')
         body.classList.remove('rainbow')
         switchBtn.style.display = "none"
         notion.src = "https://cloud-m5dd4kioq.vercel.app/0image-5.png"
-
+        
         isDark = true
         body.classList.add('darkmode')
     }
     console.log(change.classList)
+})  
+
+signupBtn.addEventListener('click', _ => {
+    window.open('https://hack.af/nestm', '_blank')
 })
